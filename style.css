@@ -28,6 +28,11 @@ button:active {  /*atividade do botão*/
     opacity: 0.8;
 }
 
+button[disabled] {
+    opacity: 0.7;
+}
+/*quando o botão estiver desabilitado ele ira ficar com essa opacidade*/
+
 .solid_button{
     background: white;
     border: none;

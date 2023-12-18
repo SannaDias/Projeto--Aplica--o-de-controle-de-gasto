@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+   
     <title>Login - Controle de gastos</title>
 </head>
 <body>
     <form >
         <div>
             <div><label for="">Email</label></div>
-            <input type="email" name="email" placeholder="seu@gmail.com">
+            <input type="email" name="email" onchange="validateFields();" id="email" placeholder="seu@gmail.com">
         </div>
         <div>
             <div><label for="">Senha</label></div>
-             <input type="password" name="password" placeholder="Senha">
+             <input type="password" name="password" onchange="validateFields()" id="password" placeholder="Senha">
         </div>
 
         <div>
-            <button type="button" class="clear_button">Recuperar senha</button>
+            <button type="button" class="clear_button" id="recover-password-button" disabled="true">Recuperar senha</button>
         </div>
 
         <div>
-            <button type="button" class="solid_button">Entrar</button>
+            <button type="button" class="solid_button" id="login-button" disabled="true" >Entrar </button>
         </div>
 
        <div>
