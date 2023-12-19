@@ -43,3 +43,9 @@ button[disabled] {
     color: white;
     border: 1px solid white;
 }
+
+.error{
+    color: white;
+    background: red;
+    display: none;
+}

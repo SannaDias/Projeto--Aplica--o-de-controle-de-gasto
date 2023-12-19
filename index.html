@@ -12,12 +12,18 @@
     <form >
         <div>
             <div><label for="">Email</label></div>
-            <input type="email" name="email" onchange="validateFields();" id="email" placeholder="seu@gmail.com">
+            <input type="email" name="email" onchange="oncChangeEnail();" id="email" placeholder="seu@gmail.com">
+            <div class="error" id="email-required-error">Email é obrigatorio</div>
+            <div class="error" id="email-invalid-error">Email é invalido</div>
+
         </div>
         <div>
             <div><label for="">Senha</label></div>
-             <input type="password" name="password" onchange="validateFields()" id="password" placeholder="Senha">
-        </div>
+             <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Senha">
+             <div class="error" id="password-required-error">Senha é obrigatorio</div>
+            
+      
+            </div>
 
         <div>
             <button type="button" class="clear_button" id="recover-password-button" disabled="true">Recuperar senha</button>
