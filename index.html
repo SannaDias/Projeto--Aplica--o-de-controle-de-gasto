@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <script src="validations.js"></script>
+    <link rel="stylesheet" href="global.css">
    
     <title>Login - Controle de gastos</title>
 </head>
 <body>
     <form >
-        <div>
+        <div class="form-field">
             <div><label for="">Email</label></div>
             <input type="email" name="email" onchange="oncChangeEnail();" id="email" placeholder="seu@gmail.com">
             <div class="error" id="email-required-error">Email é obrigatorio</div>
             <div class="error" id="email-invalid-error">Email é invalido</div>
 
         </div>
-        <div>
+        <div class="form-field">
             <div><label for="">Senha</label></div>
              <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Senha">
              <div class="error" id="password-required-error">Senha é obrigatorio</div>
