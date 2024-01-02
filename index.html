@@ -7,7 +7,24 @@
     <script src="main.js"></script>
     <script src="validations.js"></script>
     <link rel="stylesheet" href="global.css">
-   
+    <script src= "https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js";></script>
+    <script src= "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js";></script>    
+    <script src="loading.js"></script>
+    
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCZiLAtLzwKcVi3o5zI-KtS5zwIKWsTX1k",
+            authDomain: "controle-de-gastos-5182b.firebaseapp.com",
+            projectId: "controle-de-gastos-5182b",
+            storageBucket: "controle-de-gastos-5182b.appspot.com",
+            messagingSenderId: "730319191985",
+            appId: "1:730319191985:web:4b5d3c1f48105530c74790"
+};
+        firebase.initializeApp(firebaseConfig);
+
+        
+    </script>
+
     <title>Login - Controle de gastos</title>
 </head>
 <body>
@@ -32,11 +49,11 @@
         </div>
 
         <div>
-            <button type="button" class="solid_button" id="login-button" disabled="true" >Entrar </button>
+            <button type="button" class="solid_button" id="login-button" disabled="true" onclick="login()" >Entrar </button>
         </div>
 
        <div>
-            <button type="button" class="outline_button">Registrar</button>
+            <button type="button" class="outline_button" onclick="register()">Registrar</button>
        </div>
        
     </form>

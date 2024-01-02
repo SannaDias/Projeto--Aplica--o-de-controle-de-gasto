@@ -11,7 +11,31 @@ function onChangePassword(){
     togglePasswordErros();
 }
 
-   
+
+function login(){
+    
+        firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response =>{
+            window.location.href = "Pages/home/home.html"
+        }).catch(error=>{
+           alert( getErrorMessage(error));
+        }) ;
+       
+    //window.location.href = "Pages/home/home.html"
+ }   
+
+ //função que alerta o usuário não encontrado de acordo com o codigo do erro mostrado no console.
+ function getErrorMessage(error) {
+    if(error.code =="auth/invalid-credential") {
+        return "Usuário não encontrado"
+    }
+        return error.message;
+ }
+
+ function register(){
+    window.location.href = "Pages/register/register.html"
+ }
+
+
 function isPasswordValid(){
     const password = form.password().value;
     if(!password) {
