@@ -13,10 +13,11 @@ function onChangePassword(){
 
 
 function login(){
-    
+        showLoading();
         firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response =>{
             window.location.href = "Pages/home/home.html"
         }).catch(error=>{
+            hideLoading();
            alert( getErrorMessage(error));
         }) ;
        
@@ -32,6 +33,7 @@ function login(){
  }
 
  function register(){
+    showLoading();
     window.location.href = "Pages/register/register.html"
  }
 
