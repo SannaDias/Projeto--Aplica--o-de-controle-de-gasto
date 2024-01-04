@@ -26,17 +26,32 @@ function login(){
 
  //função que alerta o usuário não encontrado de acordo com o codigo do erro mostrado no console.
  function getErrorMessage(error) {
+   
     if(error.code =="auth/invalid-credential") {
         return "Usuário não encontrado"
+    }
+    if (error.code == "auth/wrong-password"){
+        return "Senha inválida";
     }
         return error.message;
  }
 
  function register(){
-    showLoading();
+    showLoading(); //mostra o componente de carregamento na tela sempre que o programa tiver fazendo
     window.location.href = "Pages/register/register.html"
  }
 
+function recoverPassword(){
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(document.getElementById("email").value).then(() =>{
+    //firebase.auth().sendPasswordReseEmail(form.email().value) //função retorna uma promisse
+        hideLoading(); // quando o email for enviado com sucesso, escondo componente de loadin 
+        alert("Email enviado com sucesso");
+    }).catch(error =>{ //se der erro
+        hideLoading();// esconde o componente de loading
+        alert(getErrorMessage(error));//e sobe o alerta de erro
+    }) ;
+}
 
 function isPasswordValid(){
     const password = form.password().value;
