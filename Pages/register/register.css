@@ -1,4 +1,5 @@
-* body {
+
+ body {
     background: rgb(45, 211, 111);
     height: 100vh;
 }
@@ -12,9 +13,4 @@ button{
     cursor: pointer;
     margin-top: 10px;
 }
-
-
-
-
-/*quando o botão estiver desabilitado ele ira ficar com essa opacidade*/
 

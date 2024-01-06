@@ -10,6 +10,8 @@
     <script src= "https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js";></script>
     <script src= "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js";></script>    
     <script src="loading.js"></script>
+   
+
     
     <script>
         const firebaseConfig = {
@@ -37,12 +39,13 @@
 
         </div>
         <div class="form-field">
-            <div><label for="">Senha</label></div>
-             <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Senha">
-             <div class="error" id="password-required-error">Senha é obrigatorio</div>
-            
-      
-            </div>
+             <div><label for="">Senha</label></div>
+              <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Senha">
+            <div class="error" id="password-required-error">Senha é obrigatório</div>
+         </div>
+    
+    <!-- Adicione o elemento do reCAPTCHA aqui -->
+    <div id="recaptcha-container"></div>
 
         <div>
             <button type="button" class="clear_button" id="recover-password-button" disabled="true" onclick="recoverPassword()">Recuperar senha</button>

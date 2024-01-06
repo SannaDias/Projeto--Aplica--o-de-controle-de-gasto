@@ -27,11 +27,11 @@ function login(){
  //função que alerta o usuário não encontrado de acordo com o codigo do erro mostrado no console.
  function getErrorMessage(error) {
    
-    if(error.code =="auth/invalid-credential") {
+    if (error.code === "auth/invalid-credential" || error.code === "auth/user-not-found") {
         return "Usuário não encontrado"
     }
     if (error.code == "auth/wrong-password"){
-        return "Senha inválida";
+        return "Senha inválida";S
     }
         return error.message;
  }
