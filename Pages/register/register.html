@@ -11,21 +11,26 @@
     <form>
         <div class="form-field">
             <div><label>Email</label></div>
-            <input type="email" placeholder="seu@gmail.com">
+            <input type="email" placeholder="seu@gmail.com" onchange="onChangeEmail();">
+            <div class="error" id="email-required-error">Email é obrigatorio</div>
+            <div class="error" id="email-invalid-error">Email é invalido</div>
         </div>
 
        <div class="form-field">
             <div><label >Senha</label></div>
             <input type="password" placeholder="Senha">
+            <div class="error" id="password-required-error">A Senha é obrigatorio</div>
+            <div class="error" id="password-min-lengh-error">A senha deve ter pelo menos 6 caracteres</div>
        </div>
 
         <div class="form-field">
             <div><label>Confirme sua senha</label></div>
         <input type="password" placeholder="Confirmar senha">
+        <div class="error" id="password-doesnt-match-error">Senah e Confirmar senha devem ser iguais</div>
         </div>
         
         <div >
-            <button type="button" class="solid_button">Registrar</button>
+            <button type="button" class="solid_button" disabled="true">Registrar</button>
         </div>
 
         <div>
