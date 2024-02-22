@@ -1,5 +1,6 @@
 //onchange="" toda vez que o campo de email for modificado ele vai alterar o js
 
+
 function oncChangeEnail() {
     toggleButtonsDisable();
     toggleEmailErros();
